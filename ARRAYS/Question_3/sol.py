@@ -3,7 +3,6 @@
 
 # Naive approach:
 
-
 def find_missing_number_naive(arr, n):
     for num in range(1, n + 2):  # Numbers from 1 to n+1
         if num not in arr:
@@ -16,7 +15,6 @@ print("Missing Number (Naive):", find_missing_number_naive(arr, n))
 
 
 # Best Approach (Using Sum Formula)
-
 
 def find_missing_number_best(arr, n):
     total_sum = (n + 1) * (n + 2) // 2  # Sum of first n+1 natural numbers

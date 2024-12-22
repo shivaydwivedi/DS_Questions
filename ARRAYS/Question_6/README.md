@@ -29,23 +29,7 @@ Given an array of integers, find the first repeating element, i.e., the element 
 #### **Space Complexity**
 - \( O(1) \), no extra space is used.
 
-#### **Code**
-```python
-def first_repeating_naive(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(i + 1, n):
-            if arr[i] == arr[j]:
-                return arr[i]
-    return "No repeating element"
 
-# Example Usage
-arr = [10, 5, 3, 4, 3, 5, 6]
-result = first_repeating_naive(arr)
-print(f"First Repeating Element: {result}")
-```
-
----
 
 ### **Best Approach (Using Hashing)**
 
@@ -65,23 +49,6 @@ print(f"First Repeating Element: {result}")
 
 #### **Space Complexity**
 - \( O(n) \), for the dictionary.
-
-#### **Code**
-```python
-def first_repeating_hashing(arr):
-    seen = {}
-    for num in arr:
-        if num in seen:
-            return num
-        seen[num] = True
-    return "No repeating element"
-
-# Example Usage
-arr = [10, 5, 3, 4, 3, 5, 6]
-result = first_repeating_hashing(arr)
-print(f"First Repeating Element: {result}")
-```
-
 ---
 
 ### **Example**
@@ -95,66 +62,3 @@ print(f"First Repeating Element: {result}")
 
 ---
 
-### **README.md**
-
-```markdown
-# Find the First Repeating Element in an Array of Integers
-
-## Problem Statement
-Given an array of integers, find the first repeating element. The first repeating element is the one that occurs more than once and has the smallest first occurrence index.
-
----
-
-## Approaches
-
-### 1. Naive Approach (Two Nested Loops)
-- **Explanation**:
-  - Compare each element with all the elements that come after it using two nested loops.
-  - Return the first element that repeats.
-- **Time Complexity**: \( O(n^2) \)
-- **Space Complexity**: \( O(1) \)
-- **Code**:
-  ```python
-  def first_repeating_naive(arr):
-      n = len(arr)
-      for i in range(n):
-          for j in range(i + 1, n):
-              if arr[i] == arr[j]:
-                  return arr[i]
-      return "No repeating element"
-  ```
-
----
-
-### 2. Best Approach (Using Hashing)
-- **Explanation**:
-  - Use a dictionary to keep track of elements encountered during traversal.
-  - If an element is already in the dictionary, it is the first repeating element.
-- **Time Complexity**: \( O(n) \)
-- **Space Complexity**: \( O(n) \), for the dictionary.
-- **Code**:
-  ```python
-  def first_repeating_hashing(arr):
-      seen = {}
-      for num in arr:
-          if num in seen:
-              return num
-          seen[num] = True
-      return "No repeating element"
-  ```
-
----
-
-## Example
-
-### Input
-`arr = [10, 5, 3, 4, 3, 5, 6]`
-
-### Output
-- **Naive Approach**: `5`
-- **Best Approach**: `5`
-```
-
----
-
-Let me know if we should move to **Question 7: Find the Intersection of Two Sorted Arrays**, or if you need clarification. 😊

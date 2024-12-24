@@ -1,9 +1,8 @@
 # Question-10:Rearrange an array such that even number comes before the odd numbers
 
 
-
-
 # Naive Approach (Using Extra Space)
+
 def rearrange(arr):
     even_numbers = []
     odd_numbers = []
@@ -24,7 +23,11 @@ result = rearrange(arr)
 print("Rearranged Array:", result)
 
 
+
+
+
 # Optimal Approach (In-place solution)
+
 def rearrange_in_place(arr):
     left, right = 0, len(arr) - 1
     

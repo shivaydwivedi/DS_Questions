@@ -55,8 +55,6 @@ Given the arrival and departure times of trains, find the minimum number of plat
 #### **Space Complexity**
 - \( O(1) \), as no additional space is used.
 
-
-
 ### **Example**
 
 #### **Input**:
